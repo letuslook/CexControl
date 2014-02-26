@@ -602,8 +602,11 @@ def GetPrice(Context, Ticker):
     ## Get price
     ticker = Context.ticker(Ticker)
 
-    Ask = ConvertUnicodeFloatToFloat(ticker["ask"])
-    Bid = ConvertUnicodeFloatToFloat(ticker["bid"])
+    #Ask = ConvertUnicodeFloatToFloat(ticker["ask"])
+    Ask = ticker["ask"]
+    #log.Output (Ask)
+    #Bid = ConvertUnicodeFloatToFloat(ticker["bid"])
+    Bid = ticker["bid"]
 
     ## Get average
     Price = (Ask+Bid) / 2
